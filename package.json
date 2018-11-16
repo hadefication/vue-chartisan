@@ -1,13 +1,13 @@
 {
   "name": "vue-chartisan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Just another Chartist port to Vue",
-  "repository": "git@github.com:hadefication/vue-chartist.git",
+  "repository": "git@github.com:hadefication/vue-chartisan.git",
   "author": "Glen  Bangkila <hadeinvane@gmail.com>",
   "license": "MIT",
-  "main": "dist/vue-chartist.umd.js",
-  "module": "dist/vue-chartist.esm.js",
-  "unpkg": "dist/vue-chartist.min.js",
+  "main": "dist/vue-chartisan.umd.js",
+  "module": "dist/vue-chartisan.esm.js",
+  "unpkg": "dist/vue-chartisan.min.js",
   "browser": {
     "./sfc": [
       "src/components/Pie.vue",
@@ -17,9 +17,9 @@
   },
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config rollup.config.js --format umd --file dist/vue-chartist.umd.js",
-    "build:es": "rollup --config rollup.config.js --format es --file dist/vue-chartist.esm.js",
-    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/vue-chartist.min.js"
+    "build:umd": "rollup --config rollup.config.js --format umd --file dist/vue-chartisan.umd.js",
+    "build:es": "rollup --config rollup.config.js --format es --file dist/vue-chartisan.esm.js",
+    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/vue-chartisan.min.js"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
