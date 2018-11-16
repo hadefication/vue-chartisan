@@ -21,7 +21,7 @@ gulp.task('default', function () {
                 prefix: "vue-",
                 suffix: ".min",
                 extname: ".css",
-                basename: 'chartist',
+                basename: 'chartisan',
             }))
             .pipe(gulp.dest('./dist'));
 });
