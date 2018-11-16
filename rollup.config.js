@@ -6,7 +6,7 @@ import resolve from 'rollup-plugin-node-resolve';
 export default {
     input: 'src/wrapper.js',
     output: {
-        name: 'VueChartist',
+        name: 'VueChartisan',
         exports: 'named',
     },
     plugins: [
