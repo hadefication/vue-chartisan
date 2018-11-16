@@ -1,0 +1,42 @@
+{
+  "name": "vue-chartisan",
+  "version": "0.1.0",
+  "description": "Just another Chartist port to Vue",
+  "repository": "git@github.com:hadefication/vue-chartist.git",
+  "author": "Glen  Bangkila <hadeinvane@gmail.com>",
+  "license": "MIT",
+  "main": "dist/vue-chartist.umd.js",
+  "module": "dist/vue-chartist.esm.js",
+  "unpkg": "dist/vue-chartist.min.js",
+  "browser": {
+    "./sfc": [
+      "src/components/Pie.vue",
+      "src/components/Bar.vue",
+      "src/components/Line.vue"
+    ]
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config rollup.config.js --format umd --file dist/vue-chartist.umd.js",
+    "build:es": "rollup --config rollup.config.js --format es --file dist/vue-chartist.esm.js",
+    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/vue-chartist.min.js"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "rollup": "^0.67.1",
+    "rollup-plugin-babel-minify": "^6.1.1",
+    "rollup-plugin-buble": "^0.19.4",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-vue": "^4.3.2",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "dependencies": {
+    "chartist": "^0.11.0"
+  }
+}
