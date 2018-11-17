@@ -1,6 +1,6 @@
 {
   "name": "vue-chartisan",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Just another Chartist port to Vue",
   "repository": "git@github.com:hadefication/vue-chartisan.git",
   "author": "Glen  Bangkila <hadeinvane@gmail.com>",
