@@ -2,6 +2,7 @@
   "name": "vue-chartisan",
   "version": "0.1.9",
   "description": "Just another Chartist port to Vue",
+  "keywords": ["vue", "chartist", "charts", "svg charts", "component"],
   "repository": "git@github.com:hadefication/vue-chartisan.git",
   "author": "Glen  Bangkila <hadeinvane@gmail.com>",
   "license": "MIT",
