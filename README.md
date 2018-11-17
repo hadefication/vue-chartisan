@@ -79,3 +79,66 @@ new Vue({
     </body>
 </html>
 ```
+You can also use individually the exposed components anywhere without doing that standard approach by importing it from the module. See code below:
+```
+// App.vue
+<template>
+    <bar-chart :data="{}" :options="{}"/>
+    <line-chart :data="{}" :options="{}"/>
+    <pei-chart :data="{}" options="{}" :responsive-options="[]"/>
+</template>
+
+<script>
+    import { BarChart, PieChart, LineChart } from 'vue-chartisan';
+
+    export default {
+        components: {
+            BarChart,
+            PieChart,
+            LineChart
+        }
+    }
+</script>
+```
+#### Component Usage
+All of the available components has two props namely `data` and `options` that expects an object value with the exception of `PieChart` that has an extra props/param `responsive-options` that accepts an array.
+```
+// Chartist (Bar)
+new Chartist.Bar('.ct-chart', {
+    labels: [1, 2, 3, 4, 5, 6, 7],
+    series: [
+        [1, 3, 2, -5, -3, 1, -6],
+        [-5, -2, -4, -1, 2, -3, 1]
+    ]
+}, {
+    seriesBarDistance: 12,
+    low: -10,
+    high: 10
+});
+
+// VueChartisan (BarChart)
+<template>
+    <bar-chart 
+        :data="{
+            labels: [1, 2, 3, 4, 5, 6, 7],
+            series: [
+                [1, 3, 2, -5, -3, 1, -6],
+                [-5, -2, -4, -1, 2, -3, 1]
+            ]
+        }"
+        :options="{
+            seriesBarDistance: 12,
+            low: -10,
+            high: 10
+        }"/>
+</template>
+
+<script>
+    import { BarChart } from 'vue-chartisan';
+    export default {
+        components: {
+            BarChart
+        }
+    }
+</script>
+```
