@@ -22,6 +22,17 @@
             }
         },
 
+        watch: {
+            data: {
+                deep: true,
+                handler: function() {
+                    this.$nextTick(function() {
+                        this.pie.update(this.data, this.options, this.responsiveOptions);
+                    });
+                }
+            }
+        },
+
         methods: {
             init()
             {
@@ -36,9 +47,7 @@
 
         render(h)
         {
-            return h('div', {
-                ref: 'pie'
-            });
+            return h('div', {ref: 'pie'});
         },
 
         created()

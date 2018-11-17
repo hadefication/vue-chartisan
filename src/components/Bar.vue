@@ -16,6 +16,17 @@
             }
         },
 
+        watch: {
+            data: {
+                deep: true,
+                handler: function() {
+                    this.$nextTick(function() {
+                        this.bar.update(this.data, this.options);
+                    });
+                }
+            }
+        },
+
         methods: {
             init()
             {
@@ -29,9 +40,7 @@
 
         render(h)
         {
-            return h('div', {
-                ref: 'bar'
-            });
+            return h('div', { ref: 'bar'});
         },
 
         created()

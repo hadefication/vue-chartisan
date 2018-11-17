@@ -20,6 +20,17 @@
             }
         },
 
+        watch: {
+            data: {
+                deep: true,
+                handler: function() {
+                    this.$nextTick(function() {
+                        this.line.update(this.data, this.options);
+                    });
+                }
+            }
+        },
+
         methods: {
             init()
             {
@@ -33,9 +44,7 @@
 
         render(h)
         {
-            return h('div', {
-                ref: 'line'
-            });
+            return h('div', {ref: 'line'});
         },
 
         created()

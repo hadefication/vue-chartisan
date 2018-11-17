@@ -1,5 +1,5 @@
 import vue from 'rollup-plugin-vue';
-import bubble from 'rollup-plugin-buble';
+import buble from 'rollup-plugin-buble';
 import minify from 'rollup-plugin-babel-minify';
 import resolve from 'rollup-plugin-node-resolve';
 
@@ -8,6 +8,9 @@ export default {
     output: {
         name: 'VueChartisan',
         exports: 'named',
+        globals: {
+            'chartist': 'Chartist'
+        }
     },
     plugins: [
         resolve({
@@ -19,7 +22,7 @@ export default {
             css: true,
             compileTemplate: true,
         }),
-        bubble(),
+        buble(),
         minify()
     ],
     external: ['chartist']
