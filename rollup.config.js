@@ -8,6 +8,7 @@ export default {
     output: {
         name: 'VueChartisan',
         exports: 'named',
+        sourcemap: 'inline',
         globals: {
             'chartist': 'Chartist'
         }
